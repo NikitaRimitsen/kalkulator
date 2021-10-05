@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Valuuta kalkulaator</title>
+    <link rel="stylesheet" href="kalkStyle.css" type="text/css">
+</head>
+<body>
+<h1>Valuuta kalkulaator var 1</h1>
+<form name="var1" onclick="return validateForm()" method="post">
+    <label for="kogus">Sisesta kogus:</label>
+    <input type="number" name="kogus" id="kogus"> euro
+    <br>
+    <fieldset>
+        <legend>Vali valuuta:</legend><!--рамка-->
+
+        <input type="radio" name="valuuta1" id="dollar" value="dollar" onchange="radioChange(event)">
+        <label for="dollar">Dollar</label>
+        <br>
+
+        <input type="radio" name="valuuta1" id="rub" value="rub" onchange="radioChange(event)">
+        <label for="rub">Rouble</label>
+        <br>
+
+        <input type="radio" name="valuuta1" id="kroon" value="kroon" onchange="radioChange(event)">
+        <label for="kroon">Rootsi kroon</label>
+        <br>
+
+        <input type="radio" name="valuuta1" id="frank" value="frank" onchange="radioChange(event)">
+        <label for="frank">Sveitsi frank</label>
+        <br>
+    </fieldset>
+    <div id="vastus">Siia tuleb vastus...</div>
+</form>
+
+<img src="img/tyhi.png" alt="pilt" id="pilt">
+
+<h1 id="var2">Valuuta kalkulaator var 2</h1>
+<form name="var2">
+    <label for="kogus2">Sisesta kogus:</label>
+    <input type="number" name="kogus2" id="kogus2"> euro
+
+    <select name="valuuta2" onchange="selectOptionChange(event)">
+        <option value=""></option>
+        <option value="dollar">Dollar</option>
+        <option value="kroon">Rootse kroon</option>
+        <option value="frank">Sveitsi frank</option>
+        <option value="rub">Rouble</option>
+
+    </select>
+    <div id="vastus2">Siia tuleb vastus...</div>
+</form>
+<h1>Valuuta kalkulaator var 3</h1>
+<form name="var3">
+    <label for="kogus3">Sisesta kogus:</label>
+    <input type="number" name="kogus3" id="kogus3"> euro
+    <br>
+    <label for="valuutanimi">Sisesta valuuta(dollar, rouble, frank, kroon)</label>
+    <input type="text" name="valuutanimi" id="valuutanimi" placeholder="Valuuta nimetus">
+    <input type="button" onclick=" return inputCurrencyText()" value="OK">
+    <div id="vastus3">Siia tuleb vastus...</div>
+</form>
+
+<script src="kalk1.js"></script>
+</body>
+</html>
